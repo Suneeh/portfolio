@@ -35,11 +35,10 @@
           <mat-card-content class="h-full flex content-end">
             <p class="text-lg text-justify">
               <span class="italic font-bold">Servus, </span>I am Quirin, a
-              Software Engineer based in Regensburg, Bavaria. I love to provide
-              customers with well-functioning, easy-to-use and helpful software.
-              I am Quirin, a Software Engineer based in Regensburg, Bavaria. I
+              professional Software Engineer based in Regensburg, Bavaria. I
               love to provide customers with well-functioning, easy-to-use and
-              helpful software.
+              helpful software. I'm best known for explaining highly complex
+              technical issues in an easy-to-understand manner.
             </p>
           </mat-card-content>
         </mat-card>
@@ -68,7 +67,7 @@
           <mat-card-title>
             <div class="flex">
               <mat-icon class="mr-3">newspaper</mat-icon>
-              <span>Blogposts</span>
+              <span class="font-bold">Blogposts</span>
             </div>
           </mat-card-title>
         </mat-card-header>
@@ -80,7 +79,7 @@
             <mat-icon class="m-5">{{ item.icon }}</mat-icon>
             <div>
               <p class="text-lg">{{ item.title }}</p>
-              <p class="text-md">{{ item.subtitle }}</p>
+              <p class="text-md text-[#5F5F5F]">{{ item.subtitle }}</p>
             </div> </a
           >}
         </mat-card-content>
@@ -142,6 +141,35 @@
     </div>
   </div>
 </div>
+<div class="px-5 md:px-45 py-5">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <span class="text-4xl">
+          This portfolio is <br />a conversation starter.
+        </span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <div>Say Hi!</div>
+        <div class="grid grid-cols-12 gap-2">
+          <div class="col-span-8 flex flex-col">
+            <span class="text-2xl text-rose-800 font-bold">Quirin Langer</span>
+            <span class="text-lg text-[#5F5F5F]">Software Engineer</span>
+          </div>
+          <div class="col-span-1 border-2">In</div>
+          <div class="col-span-1 border-2">Mail</div>
+          <div class="col-span-1 border-2">Insta</div>
+          <div class="col-span-1 border-2">Git</div>
+        </div>
+        <div>
+          <p class="text-md text-center">&#169; {{ year() }} – Quirin Langer</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
 
 <div class="px-5 md:px-45 py-5">
   <span class="text-3xl">Featured Projects</span>
@@ -155,7 +183,7 @@
         <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p class="text-md text-justify">
+        <p class="text-md text-justify text-[#5F5F5F]">
           By balancing user experience with high-quality content and intuitive
           design, this platform elegantly converts beauty browsing into a
           seamless, enjoyable journey. My contributions included developing a
@@ -173,7 +201,7 @@
         <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p class="text-md text-justify">
+        <p class="text-md text-justify text-[#5F5F5F]">
           By balancing user experience with high-quality content and intuitive
           design, this platform elegantly converts beauty browsing into a
           seamless, enjoyable journey. My contributions included developing a
@@ -191,7 +219,7 @@
         <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p class="text-md text-justify">
+        <p class="text-md text-justify text-[#5F5F5F]">
           By balancing user experience with high-quality content and intuitive
           design, this platform elegantly converts beauty browsing into a
           seamless, enjoyable journey. My contributions included developing a
@@ -216,11 +244,5 @@
 </ul>
 <br />
 <h2>Footer</h2>
-<div>
-  <div>This Portfolio is a conversation starter.</div>
-  <div>Say hi -> mail</div>
-  <div>Quirin Langer</div>
-  <div>Sonftware Engineer</div>
-  <div>Social Media Links</div>
-  <div>Copy Right Kram Gedöns</div>
-</div>
+
+https://uicolors.app/generate/ffccd3

@@ -11,6 +11,7 @@ import { MatDividerModule } from '@angular/material/divider';
 })
 export class App {
   protected readonly title = signal('portfolio');
+  protected readonly year = signal(new Date().getFullYear());
   blogEntries: BlogListEntry[] = [
     {
       icon: 'book',
