@@ -1,4 +1,4 @@
-<div class="px-5 md:px-45 py-10 h-screen">
+<div class="px-5 md:px-45 py-5 h-screen">
   <div class="flex justify-between p-5 bg-rose-200 rounded-xl items-center">
     <div class="flex items-center">
       <mat-icon class="mr-3">light_mode</mat-icon>
@@ -23,14 +23,17 @@
           </mat-card-content>
         </mat-card>
         <mat-card class="col-span-7 md:col-span-3">
-          <img class="rounded-lg" src="/portrait.jpg" />
+          <img class="rounded-xl" src="/portrait.jpg" />
         </mat-card>
       </div>
 
-      <div class="grid grid-cols-7 gap-5 mb-5 h-full">
+      <div class="grid grid-cols-7 gap-5 h-full">
         <mat-card class="col-span-7 md:col-span-5">
-          <mat-card-content>
-            <p class="text-lg">
+          <mat-card-header>
+            <mat-card-title><mat-icon>person</mat-icon></mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="h-full flex content-end">
+            <p class="text-lg text-justify">
               <span class="italic font-bold">Servus, </span>I am Quirin, a
               Software Engineer based in Regensburg, Bavaria. I love to provide
               customers with well-functioning, easy-to-use and helpful software.
@@ -60,7 +63,7 @@
       </div>
     </div>
     <div class="flex col-span-10 md:col-span-3 flex-col gap-5">
-      <mat-card class="col-span-5 h-full">
+      <mat-card class="h-full">
         <mat-card-header>
           <mat-card-title>
             <div class="flex">
@@ -70,82 +73,152 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <span>TODO: ForEachLoop over items</span>
-          <div class="flex gap-5 items-center">
-            <mat-icon class="m-5">auto_stories</mat-icon>
-            <div>
-              <p class="text-lg">Blogs From Confluence</p>
-              <p class="text-md">Subtitle</p>
-            </div>
-          </div>
+          @for (item of blogEntries; track $index) { @if ($index !== 0) {
           <mat-divider></mat-divider>
-          <div class="flex gap-5 items-center">
-            <mat-icon class="m-5">auto_stories</mat-icon>
+          }
+          <a [href]="item.href + $index" class="flex gap-5 items-center my-2">
+            <mat-icon class="m-5">{{ item.icon }}</mat-icon>
             <div>
-              <p class="text-lg">Atomic Habits</p>
-              <p class="text-md">Subtitle</p>
-            </div>
-          </div>
-          <mat-divider></mat-divider>
-          <div class="flex gap-5 items-center">
-            <mat-icon class="m-5">auto_stories</mat-icon>
-            <div>
-              <p class="text-lg">Atomic Habits</p>
-              <p class="text-md">Subtitle</p>
-            </div>
-          </div>
+              <p class="text-lg">{{ item.title }}</p>
+              <p class="text-md">{{ item.subtitle }}</p>
+            </div> </a
+          >}
         </mat-card-content>
       </mat-card>
       <div class="grid grid-cols-8 gap-5">
         <mat-card class="col-span-4">
           <mat-card-content>
-            <div class="flex items-center justify-between">
+            <a
+              href="https://www.linkedin.com/in/quirin-langer"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between"
+            >
               <span class="text-lg">LinkedIn</span>
               <mat-icon>arrow_right_alt</mat-icon>
-            </div>
+            </a>
           </mat-card-content>
         </mat-card>
         <mat-card class="col-span-4">
           <mat-card-content>
-            <div class="flex items-center justify-between">
+            <a
+              href="https://github.com/Suneeh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between"
+            >
               <span class="text-lg">Github</span>
               <mat-icon>arrow_right_alt</mat-icon>
-            </div>
+            </a>
           </mat-card-content>
         </mat-card>
         <mat-card class="col-span-4">
           <mat-card-content>
-            <div class="flex items-center justify-between">
+            <a
+              href="mailto:qu.langer@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between"
+            >
               <span class="text-lg">Mail</span>
               <mat-icon>arrow_right_alt</mat-icon>
-            </div>
+            </a>
           </mat-card-content>
         </mat-card>
         <mat-card class="col-span-4">
           <mat-card-content>
-            <div class="flex items-center justify-between">
+            <a
+              href="https://www.instagram.com/_suneeh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between"
+            >
               <span class="text-lg">Instagram</span>
               <mat-icon>arrow_right_alt</mat-icon>
-            </div>
+            </a>
           </mat-card-content>
         </mat-card>
       </div>
-      <div class="grid"></div>
     </div>
   </div>
 </div>
-<h2>Projects</h2>
-<div>
-  <div>Smokkers</div>
-  <div>Beautykaufhaus</div>
-  <div>StarPiercing</div>
-  <div>KTM PowerShop</div>
-  <div>https://www.kartons24.de/</div>
+
+<div class="px-5 md:px-45 py-5">
+  <span class="text-3xl">Featured Projects</span>
+  <div class="mt-10 grid grid-cols-10 gap-5">
+    <mat-card class="col-span-10 md:col-span-5">
+      <img
+        class="rounded-t-xl"
+        src="https://ris-development.de/wp-content/uploads/2018/02/ris-development-projekt-beautykaufhaus-8.jpg"
+      />
+      <mat-card-header>
+        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify">
+          By balancing user experience with high-quality content and intuitive
+          design, this platform elegantly converts beauty browsing into a
+          seamless, enjoyable journey. My contributions included developing a
+          dynamic category structure, integrating 'Trusted Shops', and Google
+          Analytics to provide the best possible administration to the owner.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col-span-10 md:col-span-5">
+      <img
+        class="rounded-t-xl"
+        src="https://ris-development.de/wp-content/uploads/2019/05/ris-development-referenz-smokkers-11.jpg"
+      />
+      <mat-card-header>
+        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify">
+          By balancing user experience with high-quality content and intuitive
+          design, this platform elegantly converts beauty browsing into a
+          seamless, enjoyable journey. My contributions included developing a
+          dynamic category structure, integrating 'Trusted Shops', and Google
+          Analytics to provide the best possible administration to the owner.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col-span-10 md:col-span-5">
+      <img
+        class="rounded-t-xl"
+        src="https://ris-development.de/wp-content/uploads/2020/11/ris-development-projekte-autoglaswelt-mobile-ansicht.jpg"
+      />
+      <mat-card-header>
+        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify">
+          By balancing user experience with high-quality content and intuitive
+          design, this platform elegantly converts beauty browsing into a
+          seamless, enjoyable journey. My contributions included developing a
+          dynamic category structure, integrating 'Trusted Shops', and Google
+          Analytics to provide the best possible administration to the owner.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
+
+<div>smokkers ? RISimage!</div>
+<div>Autoglaswelt ? RISimage!</div>
+<div>KTM PowerShop ? image?</div>
+<div>Kartons24.de ? image?</div>
+<br />
+<h2>Animations TODO:</h2>
+<ul>
+  <li>Animate social icons (and make component?)</li>
+  <li>Animate Project Cards on scroll - maybe even main cards on leave ?</li>
+  <li>Hover Effects on &lt;a&gt; tags. Change Color</li>
+</ul>
+<br />
+<h2>Footer</h2>
 <div>
   <div>This Portfolio is a conversation starter.</div>
   <div>Say hi -> mail</div>
-  <div>Nice animation css styling thingy</div>
   <div>Quirin Langer</div>
   <div>Sonftware Engineer</div>
   <div>Social Media Links</div>

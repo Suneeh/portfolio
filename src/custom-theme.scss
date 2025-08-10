@@ -40,3 +40,9 @@ body {
     color: #a50036,
   )
 );
+
+@include mat.card-overrides(
+  (
+    elevated-container-color: #ffccd3,
+  )
+);
