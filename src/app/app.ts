@@ -17,31 +17,25 @@ export class App {
       icon: 'book',
       title: 'Database Optimization',
       subtitle: 'Write Optimization vs. Read Optimization',
-      href: 'ööhm foo bar',
+      href: 'https://docs.google.com/document/d/1XTnfd2nKVVgr8nEQxD8LLyD3iIYZtoXpJIsY8v85-0o/edit?usp=sharing',
     },
     {
       icon: 'book',
       title: 'Atmoic Habits',
       subtitle: 'My summary of James Clears bestseller',
-      href: 'ööhm foo bar',
+      href: 'https://docs.google.com/document/d/1gMUX_suBYQ6v9Fom3GcZihn2pTImLWfF42bZ5wNKjXI/edit?usp=sharing',
     },
     {
       icon: 'book',
       title: 'Domain Driven Design',
       subtitle: "My summary of Amichai Mantinband's course",
-      href: 'ööhm foo bar',
+      href: 'https://docs.google.com/document/d/1SvW7vjmttxmPeD-P3sZEHPLxp64s-u9bS5z7LS_tLrQ/edit?usp=sharing',
     },
     {
       icon: 'book',
       title: 'Rate Limiting',
       subtitle: 'How to protect your APIs',
-      href: 'ööhm foo bar',
-    },
-    {
-      icon: 'book',
-      title: 'Tree Structured Data',
-      subtitle: 'How to setup your Database correctly',
-      href: 'ööhm foo bar',
+      href: 'https://docs.google.com/document/d/1D1SDzuasZLHkxcF4b220e53eztmQB6Qy7rlfzjc8U-k/edit?usp=sharing',
     },
   ];
 }

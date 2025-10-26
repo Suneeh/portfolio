@@ -75,7 +75,12 @@
           @for (item of blogEntries; track $index) { @if ($index !== 0) {
           <mat-divider></mat-divider>
           }
-          <a [href]="item.href + $index" class="flex gap-5 items-center my-2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            [href]="item.href + $index"
+            class="flex gap-5 items-center my-2"
+          >
             <mat-icon class="m-5">{{ item.icon }}</mat-icon>
             <div>
               <p class="text-lg">{{ item.title }}</p>
@@ -141,6 +146,85 @@
     </div>
   </div>
 </div>
+
+<div class="px-5 md:px-45 py-5">
+  <span class="text-3xl">Featured Projects</span>
+  <div class="mt-10 grid grid-cols-10 gap-5">
+    <mat-card class="col-span-10 md:col-span-5">
+      <img class="rounded-t-xl" src="/beautykaufhaus.jpg" />
+      <mat-card-header>
+        <mat-card-title>Beautykaufhaus - Webshop</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify text-[#5F5F5F]">
+          For BeautyKaufhaus.de, a beauty and cosmetics retailer, I enhanced the
+          webshop by combining user experience design with strategic
+          functionality. I developed a dynamic category structure to make
+          product discovery effortless, and integrated Trusted Shops for
+          credibility and Google Analytics for actionable insights. The result
+          is a smooth, engaging shopping experience that empowers the owner with
+          powerful administrative and marketing tools.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col-span-10 md:col-span-5">
+      <img class="rounded-t-xl" src="/smokkers.jpg" />
+      <mat-card-header>
+        <mat-card-title>Smokkers - Webshop</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify text-[#5F5F5F]">
+          For Smokkers.de, an online shop specializing in vapes, hookahs, and
+          tobacco products, I focused on both functionality and compliance. I
+          ensured the entire webshop met legal requirements for tobacco sales,
+          including robust age verification and content restrictions. In
+          addition to technical improvements, I provided copywriting support to
+          refine product descriptions and align the brand’s tone of voice. To
+          support international growth, I developed a custom translation tool
+          that automatically converts product data into multiple
+          languages—significantly expanding reach while reducing the time and
+          cost of manual translations.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col-span-10 md:col-span-5">
+      <img class="rounded-t-xl" src="/autoglaswelt.jpg" />
+      <mat-card-header>
+        <mat-card-title>Autoglaswelt - Webshop</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify text-[#5F5F5F]">
+          For Autoglaswelt.de, I set up a modern, conversion-focused webshop
+          specializing in automotive glass. The project included creating a
+          clean, corporate-style theme for the shop as well as a sales funnel to
+          guide users effectively from landing to checkout. I also implemented a
+          custom shop plugin that allows customers to instantly filter through
+          6,673 different front windshields for a wide range of car models. The
+          result is a fast, intuitive shopping experience optimized for both
+          usability and performance.
+        </p>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="col-span-10 md:col-span-5">
+      <img class="rounded-t-xl" src="/star-piercing.png" />
+      <mat-card-header>
+        <mat-card-title>Star Piercing - Webshop</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="text-md text-justify text-[#5F5F5F]">
+          For Star-Piercing.com, an online piercing and jewelry store, I
+          contributed to the refinement of their e-commerce platform by focusing
+          on document design. I created cohesive and visually appealing
+          templates for offers, invoices, and order confirmations, ensuring they
+          aligned with the shop's branding and aesthetic. The result is a
+          polished customer experience that maintains the brand's look and feel
+          across every stage of communication.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
 <div class="px-5 md:px-45 py-5">
   <mat-card>
     <mat-card-header>
@@ -171,66 +255,10 @@
   </mat-card>
 </div>
 
-<div class="px-5 md:px-45 py-5">
-  <span class="text-3xl">Featured Projects</span>
-  <div class="mt-10 grid grid-cols-10 gap-5">
-    <mat-card class="col-span-10 md:col-span-5">
-      <img
-        class="rounded-t-xl"
-        src="https://ris-development.de/wp-content/uploads/2018/02/ris-development-projekt-beautykaufhaus-8.jpg"
-      />
-      <mat-card-header>
-        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          By balancing user experience with high-quality content and intuitive
-          design, this platform elegantly converts beauty browsing into a
-          seamless, enjoyable journey. My contributions included developing a
-          dynamic category structure, integrating 'Trusted Shops', and Google
-          Analytics to provide the best possible administration to the owner.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="col-span-10 md:col-span-5">
-      <img
-        class="rounded-t-xl"
-        src="https://ris-development.de/wp-content/uploads/2019/05/ris-development-referenz-smokkers-11.jpg"
-      />
-      <mat-card-header>
-        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          By balancing user experience with high-quality content and intuitive
-          design, this platform elegantly converts beauty browsing into a
-          seamless, enjoyable journey. My contributions included developing a
-          dynamic category structure, integrating 'Trusted Shops', and Google
-          Analytics to provide the best possible administration to the owner.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="col-span-10 md:col-span-5">
-      <img
-        class="rounded-t-xl"
-        src="https://ris-development.de/wp-content/uploads/2020/11/ris-development-projekte-autoglaswelt-mobile-ansicht.jpg"
-      />
-      <mat-card-header>
-        <mat-card-title>TODO: IMAGE SUCKS Beautykaufhaus</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          By balancing user experience with high-quality content and intuitive
-          design, this platform elegantly converts beauty browsing into a
-          seamless, enjoyable journey. My contributions included developing a
-          dynamic category structure, integrating 'Trusted Shops', and Google
-          Analytics to provide the best possible administration to the owner.
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</div>
-
+<h1>TODO - Foreach over the projects!!!</h1>
+<div>BiLang RIS Abschlussarbeit</div>
+(immer stats mit abbilden. was habe ich verbessert? wie viel hat es gebracht?
+usw. (mobile first design, performance optimizations, SEO optimizations))
 <div>smokkers ? RISimage!</div>
 <div>Autoglaswelt ? RISimage!</div>
 <div>KTM PowerShop ? image?</div>
