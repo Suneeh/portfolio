@@ -5,9 +5,9 @@
       <span class="text-rose-800 font-bold text-2xl">Quirin Langer</span>
     </div>
     <div class="hidden justify-between gap-5 md:flex">
-      <div class="text-rose-800 uppercase">Projects</div>
-      <div class="text-rose-800 uppercase">About</div>
-      <div class="text-rose-800 uppercase">Resume</div>
+      <div class="text-rose-800 uppercase font-bold">Projects</div>
+      <div class="text-rose-800 uppercase font-bold">About</div>
+      <div class="text-rose-800 uppercase font-bold">Resume</div>
     </div>
   </div>
   <div class="grid grid-cols-10 gap-5 mt-5 h-90/100">
@@ -150,78 +150,21 @@
 <div class="px-5 md:px-45 py-5">
   <span class="text-3xl">Featured Projects</span>
   <div class="mt-10 grid grid-cols-10 gap-5">
+    @for (project of projectEntries; track $index) {
     <mat-card class="col-span-10 md:col-span-5">
-      <img class="rounded-t-xl" src="/beautykaufhaus.jpg" />
-      <mat-card-header>
-        <mat-card-title>Beautykaufhaus - Webshop</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          For BeautyKaufhaus.de, a beauty and cosmetics retailer, I enhanced the
-          webshop by combining user experience design with strategic
-          functionality. I developed a dynamic category structure to make
-          product discovery effortless, and integrated Trusted Shops for
-          credibility and Google Analytics for actionable insights. The result
-          is a smooth, engaging shopping experience that empowers the owner with
-          powerful administrative and marketing tools.
-        </p>
-      </mat-card-content>
+      <a target="_blank" rel="noopener noreferrer" [href]="project.url">
+        <img class="rounded-t-xl" [src]="project.imageSrc" />
+        <mat-card-header>
+          <mat-card-title>{{ project.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="text-lg text-justify text-[#5F5F5F]">
+            {{ project.description }}
+          </p>
+        </mat-card-content>
+      </a>
     </mat-card>
-    <mat-card class="col-span-10 md:col-span-5">
-      <img class="rounded-t-xl" src="/smokkers.jpg" />
-      <mat-card-header>
-        <mat-card-title>Smokkers - Webshop</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          For Smokkers.de, an online shop specializing in vapes, hookahs, and
-          tobacco products, I focused on both functionality and compliance. I
-          ensured the entire webshop met legal requirements for tobacco sales,
-          including robust age verification and content restrictions. In
-          addition to technical improvements, I provided copywriting support to
-          refine product descriptions and align the brand’s tone of voice. To
-          support international growth, I developed a custom translation tool
-          that automatically converts product data into multiple
-          languages—significantly expanding reach while reducing the time and
-          cost of manual translations.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="col-span-10 md:col-span-5">
-      <img class="rounded-t-xl" src="/autoglaswelt.jpg" />
-      <mat-card-header>
-        <mat-card-title>Autoglaswelt - Webshop</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          For Autoglaswelt.de, I set up a modern, conversion-focused webshop
-          specializing in automotive glass. The project included creating a
-          clean, corporate-style theme for the shop as well as a sales funnel to
-          guide users effectively from landing to checkout. I also implemented a
-          custom shop plugin that allows customers to instantly filter through
-          6,673 different front windshields for a wide range of car models. The
-          result is a fast, intuitive shopping experience optimized for both
-          usability and performance.
-        </p>
-      </mat-card-content>
-    </mat-card>
-    <mat-card class="col-span-10 md:col-span-5">
-      <img class="rounded-t-xl" src="/star-piercing.png" />
-      <mat-card-header>
-        <mat-card-title>Star Piercing - Webshop</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p class="text-md text-justify text-[#5F5F5F]">
-          For Star-Piercing.com, an online piercing and jewelry store, I
-          contributed to the refinement of their e-commerce platform by focusing
-          on document design. I created cohesive and visually appealing
-          templates for offers, invoices, and order confirmations, ensuring they
-          aligned with the shop's branding and aesthetic. The result is a
-          polished customer experience that maintains the brand's look and feel
-          across every stage of communication.
-        </p>
-      </mat-card-content>
-    </mat-card>
+    }
   </div>
 </div>
 
@@ -255,22 +198,17 @@
   </mat-card>
 </div>
 
-<h1>TODO - Foreach over the projects!!!</h1>
 <div>BiLang RIS Abschlussarbeit</div>
 (immer stats mit abbilden. was habe ich verbessert? wie viel hat es gebracht?
 usw. (mobile first design, performance optimizations, SEO optimizations))
-<div>smokkers ? RISimage!</div>
-<div>Autoglaswelt ? RISimage!</div>
+LinkedIn Post of Gmg talk? Angular Days in Munich participation certificate?
 <div>KTM PowerShop ? image?</div>
 <div>Kartons24.de ? image?</div>
 <br />
 <h2>Animations TODO:</h2>
 <ul>
+  <li>Scroll to for the header links</li>
   <li>Animate social icons (and make component?)</li>
   <li>Animate Project Cards on scroll - maybe even main cards on leave ?</li>
   <li>Hover Effects on &lt;a&gt; tags. Change Color</li>
 </ul>
-<br />
-<h2>Footer</h2>
-
-https://uicolors.app/generate/ffccd3
