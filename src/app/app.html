@@ -18,8 +18,8 @@
             <mat-card-title><mat-icon>token</mat-icon></mat-card-title>
           </mat-card-header>
           <mat-card-content class="h-full flex content-end">
-            <p class="text-2xl">Software Engineer, Petrol Head,</p>
-            <p class="text-2xl">Pokémon Enthusiast, Idiot</p>
+            <p class="text-2xl font-heading">Software Engineer, Petrol Head,</p>
+            <p class="text-2xl font-heading">Pokémon Enthusiast, Idiot</p>
           </mat-card-content>
         </mat-card>
         <mat-card class="col-span-7 md:col-span-3" appScrollAnimation>
@@ -83,7 +83,7 @@
           >
             <mat-icon class="m-3">{{ item.icon }}</mat-icon>
             <div>
-              <p class="text-lg">{{ item.title }}</p>
+              <p class="text-lg font-heading">{{ item.title }}</p>
               <p class="text-md text-[#5F5F5F]">{{ item.subtitle }}</p>
             </div> </a
           >}
@@ -98,7 +98,7 @@
               rel="noopener noreferrer"
               class="flex items-center justify-between"
             >
-              <span class="text-lg">LinkedIn</span>
+              <span class="text-lg  font-bold">LinkedIn</span>
               <mat-icon>arrow_right_alt</mat-icon>
             </a>
           </mat-card-content>
@@ -111,7 +111,7 @@
               rel="noopener noreferrer"
               class="flex items-center justify-between"
             >
-              <span class="text-lg">Github</span>
+              <span class="text-lg  font-bold">Github</span>
               <mat-icon>arrow_right_alt</mat-icon>
             </a>
           </mat-card-content>
@@ -124,7 +124,7 @@
               rel="noopener noreferrer"
               class="flex items-center justify-between"
             >
-              <span class="text-lg">Mail</span>
+              <span class="text-lg font-bold">Mail</span>
               <mat-icon>arrow_right_alt</mat-icon>
             </a>
           </mat-card-content>
@@ -137,7 +137,7 @@
               rel="noopener noreferrer"
               class="flex items-center justify-between"
             >
-              <span class="text-lg">Instagram</span>
+              <span class="text-lg  font-bold">Instagram</span>
               <mat-icon>arrow_right_alt</mat-icon>
             </a>
           </mat-card-content>
@@ -148,14 +148,14 @@
 </div>
 
 <div class="px-5 md:px-45 py-5">
-  <span class="text-3xl" appScrollAnimation>Featured Projects</span>
+  <span class="text-3xl font-heading" appScrollAnimation>Featured Projects</span>
   <div class="mt-10 grid grid-cols-10 gap-5">
     @for (project of projectEntries; track $index) {
     <mat-card class="col-span-10 md:col-span-5" appScrollAnimation>
       <a target="_blank" rel="noopener noreferrer" [href]="project.url">
         <img class="rounded-t-xl" [src]="project.imageSrc" />
         <mat-card-header>
-          <mat-card-title>{{ project.title }}</mat-card-title>
+          <mat-card-title><span class="font-bold">{{ project.title }}</span></mat-card-title>
         </mat-card-header>
         <mat-card-content>
           <p class="text-lg text-justify text-[#5F5F5F]">
@@ -172,7 +172,7 @@
   <mat-card appScrollAnimation>
     <mat-card-header>
       <mat-card-title>
-        <span class="text-4xl">
+        <span class="text-3xl font-bold">
           This portfolio is <br />a conversation starter.
         </span>
       </mat-card-title>

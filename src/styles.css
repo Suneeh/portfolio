@@ -1,4 +1,24 @@
 @import "tailwindcss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Apply Funnel Display to headings and bold text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-bold,
+.font-heading,
+mat-card-title {
+    font-family: 'Funnel Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}

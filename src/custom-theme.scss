@@ -5,6 +5,12 @@
 // custom components at https://material.angular.dev/guide/theming
 @use "@angular/material" as mat;
 
+/* Import Funnel Display font */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700;800&display=swap');
+
+/* Import Satoshi font */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap');
+
 html {
   @include mat.theme(
     (
