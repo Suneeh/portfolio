@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
+import { ScrollAnimationDirective } from './scroll-animation.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [MatCardModule, MatIconModule, MatDividerModule],
+  imports: [MatCardModule, MatIconModule, MatDividerModule, ScrollAnimationDirective],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrl: './app.css'
 })
 export class App {
   protected readonly year = signal(new Date().getFullYear());

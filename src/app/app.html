@@ -1,5 +1,5 @@
 <div class="px-5 md:px-45 py-5 h-screen">
-  <div class="flex justify-between p-5 bg-rose-200 rounded-xl items-center">
+  <div class="flex justify-between p-5 bg-rose-200 rounded-xl items-center" appScrollAnimation>
     <div class="flex items-center">
       <mat-icon class="mr-3">light_mode</mat-icon>
       <span class="text-rose-800 font-bold text-2xl">Quirin Langer</span>
@@ -13,7 +13,7 @@
   <div class="grid grid-cols-10 gap-5 mt-5 h-90/100">
     <div class="flex flex-col col-span-10 md:col-span-7 h-full">
       <div class="grid grid-cols-7 gap-5 mb-5">
-        <mat-card class="col-span-7 md:col-span-4">
+        <mat-card class="col-span-7 md:col-span-4" appScrollAnimation>
           <mat-card-header class="hidden md:block">
             <mat-card-title><mat-icon>token</mat-icon></mat-card-title>
           </mat-card-header>
@@ -22,13 +22,13 @@
             <p class="text-2xl">Pokémon Enthusiast, Idiot</p>
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-span-7 md:col-span-3">
+        <mat-card class="col-span-7 md:col-span-3" appScrollAnimation>
           <img class="rounded-xl" src="/portrait.jpg" />
         </mat-card>
       </div>
 
       <div class="grid grid-cols-7 gap-5 h-full">
-        <mat-card class="col-span-7 md:col-span-5">
+        <mat-card class="col-span-7 md:col-span-5" appScrollAnimation>
           <mat-card-header>
             <mat-card-title><mat-icon>person</mat-icon></mat-card-title>
           </mat-card-header>
@@ -43,14 +43,14 @@
           </mat-card-content>
         </mat-card>
         <div class="col-span-7 md:col-span-2 gap-5 grid grid-cols-7">
-          <mat-card class="col-span-5 md:col-span-7">
+          <mat-card class="col-span-5 md:col-span-7" appScrollAnimation>
             <mat-card-content>
               <p class="text-lg">
                 Im currently working on something - Github Link ? CV LINK ?
               </p>
             </mat-card-content>
           </mat-card>
-          <mat-card class="col-span-2 md:col-span-7">
+          <mat-card class="col-span-2 md:col-span-7" appScrollAnimation>
             <mat-card-content>
               <div class="flex items-center justify-between">
                 <span class="text-lg">Say Hi!</span>
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="flex col-span-10 md:col-span-3 flex-col gap-5">
-      <mat-card class="h-full">
+      <mat-card class="h-full" appScrollAnimation>
         <mat-card-header>
           <mat-card-title>
             <div class="flex">
@@ -90,7 +90,7 @@
         </mat-card-content>
       </mat-card>
       <div class="grid grid-cols-8 gap-5">
-        <mat-card class="col-span-4">
+        <mat-card class="col-span-4" appScrollAnimation>
           <mat-card-content>
             <a
               href="https://www.linkedin.com/in/quirin-langer"
@@ -103,7 +103,7 @@
             </a>
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-span-4">
+        <mat-card class="col-span-4" appScrollAnimation>
           <mat-card-content>
             <a
               href="https://github.com/Suneeh"
@@ -116,7 +116,7 @@
             </a>
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-span-4">
+        <mat-card class="col-span-4" appScrollAnimation>
           <mat-card-content>
             <a
               href="mailto:qu.langer@gmail.com"
@@ -129,7 +129,7 @@
             </a>
           </mat-card-content>
         </mat-card>
-        <mat-card class="col-span-4">
+        <mat-card class="col-span-4" appScrollAnimation>
           <mat-card-content>
             <a
               href="https://www.instagram.com/_suneeh/"
@@ -148,10 +148,10 @@
 </div>
 
 <div class="px-5 md:px-45 py-5">
-  <span class="text-3xl">Featured Projects</span>
+  <span class="text-3xl" appScrollAnimation>Featured Projects</span>
   <div class="mt-10 grid grid-cols-10 gap-5">
     @for (project of projectEntries; track $index) {
-    <mat-card class="col-span-10 md:col-span-5">
+    <mat-card class="col-span-10 md:col-span-5" appScrollAnimation>
       <a target="_blank" rel="noopener noreferrer" [href]="project.url">
         <img class="rounded-t-xl" [src]="project.imageSrc" />
         <mat-card-header>
@@ -169,7 +169,7 @@
 </div>
 
 <div class="px-5 md:px-45 py-5">
-  <mat-card>
+  <mat-card appScrollAnimation>
     <mat-card-header>
       <mat-card-title>
         <span class="text-4xl">
@@ -191,7 +191,7 @@
           <div class="col-span-1 border-2">Git</div>
         </div>
         <div>
-          <p class="text-md text-center">&#169; {{ year() }} – Quirin Langer</p>
+          <p class="text-md text-center">&#169; {{ year() }} - Quirin Langer</p>
         </div>
       </div>
     </mat-card-content>
