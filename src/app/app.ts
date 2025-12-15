@@ -12,6 +12,14 @@ import { ScrollAnimationDirective } from './scroll-animation.directive';
 })
 export class App {
   protected readonly year = signal(new Date().getFullYear());
+
+  scrollToProjects(): void {
+    const element = document.getElementById('featured-projects');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   blogEntries: BlogListEntry[] = [
     {
       icon: 'book',

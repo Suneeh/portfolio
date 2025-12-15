@@ -5,7 +5,7 @@
       <span class="text-rose-800 font-bold text-2xl">Quirin Langer</span>
     </div>
     <div class="hidden justify-between gap-5 md:flex">
-      <div class="text-rose-800 uppercase font-bold">Projects</div>
+      <div class="text-rose-800 uppercase font-bold cursor-pointer" (click)="scrollToProjects()">Projects</div>
       <div class="text-rose-800 uppercase font-bold">About</div>
       <div class="text-rose-800 uppercase font-bold">Resume</div>
     </div>
@@ -147,7 +147,7 @@
   </div>
 </div>
 
-<div class="px-5 md:px-45 py-5">
+<div id="featured-projects" class="px-5 md:px-45 py-5">
   <span class="text-3xl font-heading" appScrollAnimation>Featured Projects</span>
   <div class="mt-10 grid grid-cols-10 gap-5">
     @for (project of projectEntries; track $index) {
@@ -218,9 +218,6 @@ LinkedIn Post of Gmg talk? Angular Days in Munich participation certificate?
 <br />
 <h2>TODO:</h2>
 <ul>
-  <li>Fix Mobile View</li>
-  <li>Get the Image of star piercing right</li>
-  <li>Scroll to for the header links</li>
   <li>Animate social icons (and make component?)</li>
   <li>Hover Effects on &lt;a&gt; tags. Change Color</li>
 </ul>
