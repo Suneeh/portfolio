@@ -69,21 +69,7 @@ export class App {
     },
     {
       url: 'https://www.star-piercing.com',
-      imageSrc: '/3.png',
-      title: 'Star Piercing - Webshop',
-      description:
-        "For Star-Piercing.com, an online piercing and jewelry store, I contributed to the refinement of their e-commerce platform by focusing on their document design. I created cohesive and visually appealing templates for offers, invoices, and order confirmations, ensuring they aligned with the shop's branding and aesthetic as well as a polished customer experience.",
-    },
-    {
-      url: 'https://www.autoglaswelt.de',
-      imageSrc: '/autoglaswelt.jpg',
-      title: 'Autoglaswelt - Webshop',
-      description:
-        'I set up a modern, conversion-focused webshop specializing in automotive glass. The project included creating a clean, corporate-style theme for the shop as well as a sales funnel to guide users effectively from landing to checkout. I also implemented a custom shop plugin that allows customers to instantly filter through over 7000 different front windshields for a wide range of car models.',
-    },
-    {
-      url: 'https://www.star-piercing.com',
-      imageSrc: '/4.png',
+      imageSrc: '/star-piercing.png',
       title: 'Star Piercing - Webshop',
       description:
         "For Star-Piercing.com, an online piercing and jewelry store, I contributed to the refinement of their e-commerce platform by focusing on their document design. I created cohesive and visually appealing templates for offers, invoices, and order confirmations, ensuring they aligned with the shop's branding and aesthetic as well as a polished customer experience.",
