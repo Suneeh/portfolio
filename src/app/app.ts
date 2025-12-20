@@ -6,9 +6,14 @@ import { ScrollAnimationDirective } from './scroll-animation.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [MatCardModule, MatIconModule, MatDividerModule, ScrollAnimationDirective],
+  imports: [
+    MatCardModule,
+    MatIconModule,
+    MatDividerModule,
+    ScrollAnimationDirective,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly year = signal(new Date().getFullYear());
@@ -22,33 +27,33 @@ export class App {
 
   blogEntries: BlogListEntry[] = [
     {
-      icon: 'book',
+      icon: 'bookmark_add',
       title: 'Database Optimization',
       subtitle: 'Write Optimization vs. Read Optimization',
       href: 'https://docs.google.com/document/d/1XTnfd2nKVVgr8nEQxD8LLyD3iIYZtoXpJIsY8v85-0o/edit?usp=sharing',
     },
     {
-      icon: 'book',
+      icon: 'bookmark_add',
       title: 'Atmoic Habits',
-      subtitle: 'My summary of James Clear\'s bestseller',
+      subtitle: "My summary of James Clear's bestseller",
       href: 'https://docs.google.com/document/d/1gMUX_suBYQ6v9Fom3GcZihn2pTImLWfF42bZ5wNKjXI/edit?usp=sharing',
     },
     {
-      icon: 'book',
+      icon: 'bookmark_add',
       title: 'Domain Driven Design',
-      subtitle: "My summary of Amichai Mantinband\'s course",
+      subtitle: "My summary of Amichai Mantinband's course",
       href: 'https://docs.google.com/document/d/1SvW7vjmttxmPeD-P3sZEHPLxp64s-u9bS5z7LS_tLrQ/edit?usp=sharing',
     },
     {
-      icon: 'book',
+      icon: 'bookmark_add',
       title: 'Rate Limiting',
       subtitle: 'How to protect your APIs',
       href: 'https://docs.google.com/document/d/1D1SDzuasZLHkxcF4b220e53eztmQB6Qy7rlfzjc8U-k/edit?usp=sharing',
     },
     {
-      icon: 'book',
+      icon: 'bookmark_add',
       title: 'How to win friends & influence people',
-      subtitle: 'My summary of Dale Carnegie\'s bestseller',
+      subtitle: "My summary of Dale Carnegie's bestseller",
       href: 'https://docs.google.com/document/d/1k1osH-5dCU6nuO0ktVgLOA_ZF4b2HOIzSLpKqzuddx4/edit?usp=sharing',
     },
   ];
