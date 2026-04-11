@@ -22,7 +22,7 @@
     <div class="flex flex-col col-span-10 md:col-span-7 h-full">
       <div class="grid grid-cols-7 gap-5 mb-5">
         <mat-card class="col-span-7 md:col-span-4" appScrollAnimation>
-          <mat-card-header class="hidden md:block">
+          <mat-card-header>
             <mat-card-title><mat-icon>token</mat-icon></mat-card-title>
           </mat-card-header>
           <mat-card-content class="h-full flex content-end">
@@ -52,18 +52,30 @@
         </mat-card>
         <div class="col-span-7 md:col-span-2 gap-5 grid grid-cols-7">
           <mat-card class="col-span-5 md:col-span-7" appScrollAnimation>
-            <mat-card-content>
-              <p class="text-lg">
-                Im currently working on something - Github Link ? CV LINK ?
-              </p>
+            <mat-card-header>
+              <mat-card-title><mat-icon>videocam</mat-icon></mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="h-full flex content-end">
+              <a
+                href="https://youtube.com/shorts/78fcv7N6dJE"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p class="text-lg text-justify">
+                  I'm currently working on some video editing and content
+                  creation.
+                </p>
+              </a>
             </mat-card-content>
           </mat-card>
           <mat-card class="col-span-2 md:col-span-7" appScrollAnimation>
             <mat-card-content>
-              <div class="flex items-center justify-between">
-                <span class="text-lg">Say Hi!</span>
-                <mat-icon>arrow_right_alt</mat-icon>
-              </div>
+              <a href="mailto:qu.langer@gmail.com">
+                <div class="flex items-center justify-between">
+                  <span class="text-lg">Say Hi!</span>
+                  <mat-icon>arrow_right_alt</mat-icon>
+                </div>
+              </a>
             </mat-card-content>
           </mat-card>
         </div>
@@ -80,21 +92,23 @@
           </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          @for (item of blogEntries; track $index) { @if ($index !== 0) {
-          <mat-divider></mat-divider>
+          @for (item of blogEntries; track $index) {
+            @if ($index !== 0) {
+              <mat-divider></mat-divider>
+            }
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              [href]="item.href + $index"
+              class="flex gap-5 items-center my-2"
+            >
+              <mat-icon class="m-3">{{ item.icon }}</mat-icon>
+              <div>
+                <p class="text-lg font-heading">{{ item.title }}</p>
+                <p class="text-md text-[#5F5F5F]">{{ item.subtitle }}</p>
+              </div>
+            </a>
           }
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            [href]="item.href + $index"
-            class="flex gap-5 items-center my-2"
-          >
-            <mat-icon class="m-3">{{ item.icon }}</mat-icon>
-            <div>
-              <p class="text-lg font-heading">{{ item.title }}</p>
-              <p class="text-md text-[#5F5F5F]">{{ item.subtitle }}</p>
-            </div> </a
-          >}
         </mat-card-content>
       </mat-card>
       <div class="grid grid-cols-8 gap-5">
@@ -161,26 +175,30 @@
   >
   <div class="mt-10 grid grid-cols-10 gap-5">
     @for (project of projectEntries; track $index) {
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      [href]="project.url"
-      class="col-span-10 md:col-span-5"
-    >
-      <mat-card appScrollAnimation class="h-full">
-        <img class="rounded-t-xl w-full" [src]="project.imageSrc" />
-        <mat-card-header>
-          <mat-card-title
-            ><span class="font-bold">{{ project.title }}</span></mat-card-title
-          >
-        </mat-card-header>
-        <mat-card-content>
-          <p class="text-lg text-justify text-[#5F5F5F]">
-            {{ project.description }}
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        [href]="project.url"
+        class="col-span-10 md:col-span-5"
+      >
+        <mat-card appScrollAnimation class="h-full">
+          @if (project.imageSrc) {
+            <img class="rounded-t-xl w-full" [src]="project.imageSrc" />
+          }
+          <mat-card-header>
+            <mat-card-title
+              ><span class="font-bold">{{
+                project.title
+              }}</span></mat-card-title
+            >
+          </mat-card-header>
+          <mat-card-content>
+            <p class="text-lg text-justify text-[#5F5F5F]">
+              {{ project.description }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </a>
     }
   </div>
 </div>
@@ -280,84 +298,3 @@
     </mat-card-content>
   </mat-card>
 </div>
-
-<div>BiLang RIS Abschlussarbeit 2021</div>
-<h2>Final Project: Automated Translation Middleware for JTL-Ecosystem</h2>
-<p>
-  For my final examination as a Software Developer, I designed and implemented a
-  scalable solution to automate multilingual content management within the JTL
-  e-commerce ecosystem. The project involved developing a C#/.NET desktop
-  application and a RESTful API built with PHP and the Laravel framework.
-</p>
-<h3>Key Features & Technologies:</h3>
-<ul>
-  <li>
-    Automated Translation Pipeline: Integrated the DeepL API to provide
-    high-quality, automated translations for product data, categories, and SEO
-    content, significantly reducing manual effort and preventing data
-    inconsistency.
-  </li>
-  <li>
-    Middleware Architecture: Developed a custom Laravel-based API to handle
-    communication between the shop systems and translation services, including
-    usage metrics and billing logic.
-  </li>
-  <li>
-    Data Integrity: Implemented secure data handling for MSSQL databases using
-    the JTL-Ameise interface to ensure compatibility and stability within the
-    Windows-based ERP environment.
-  </li>
-  <li>
-    Full-Stack Development: Managed the project from conceptualization to
-    implementation, utilizing MVC patterns, MySQL, and JSON-based communication
-    to create a maintainable and extensible software architecture.
-  </li>
-</ul>
-<div>
-  GMG Talk old school
-  (https://www.linkedin.com/posts/quirin-langer_softwareengineering-mentoring-karriere-activity-7287430212554809344-Jn39)
-</div>
-(immer stats mit abbilden. was habe ich verbessert? wie viel hat es gebracht?
-usw. (mobile first design, performance optimizations, SEO optimizations))
-LinkedIn Post of Gmg talk? Angular Days in Munich participation certificate?
-<br />
-<br />
-<div>Zvoove era:</div>
-<ul>
-  <li>
-    Frontend Angular v20, Signals, AuthGuards, Testing, Building Component
-    Library
-  </li>
-  <li>Backend .NET 10, Minimal APIs,</li>
-  <li>
-    Scripting to build Communication Spec DTOs and Methods to connect to the
-    Backend
-  </li>
-  <li>
-    CI with Azure Pipelines and GitHub Actions (Checking Licenses, Auditing
-    Dependencies, Building & Testing the Applications)
-  </li>
-  <li>CD to Azure & AWS using k8s and ArgoCD</li>
-  <li>Observability with Prometheus & Grafana (Dashboards)</li>
-  <li>Messaging with RabbitMQ</li>
-  <li>
-    Build and scaled a new Product from the 1st Customer to currently ~16.000
-    Customers
-  </li>
-  <li>
-    Providing Microservices for other products within our company (how many?)
-    (what does it help them with)
-  </li>
-  <li>Building a custom Ratelimiting for a User Faced Public API</li>
-  <li>Being a mentor for Software Engineer trainees</li>
-  <li>Doing Job Interviews for our company with the focus on Culture Fit</li>
-</ul>
-<br />
-<h2>TODO:</h2>
-<ul>
-  <li>
-    Fix Placeholders: Working on something? -> Videos / TikTok youtube shorts
-    link?
-  </li>
-  <li>Fix URLs and buttons. Say Hi does nothing!</li>
-</ul>

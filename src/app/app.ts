@@ -60,32 +60,60 @@ export class App {
 
   projectEntries: ProjectEntry[] = [
     {
-      url: 'https://www.beautykaufhaus.de',
-      imageSrc: '/beautykaufhaus.jpg',
-      title: 'Beautykaufhaus - Webshop',
+      url: 'https://www.linkedin.com/in/quirin-langer',
+      imageSrc: '',
+      title: 'Culture Fit Interviewer - zvoove - Software Engineer',
       description:
-        'I enhanced the webshop beautykaufhaus.de, a beauty and cosmetics retailer, by combining user experience design with strategic functionality. I developed a dynamic category structure to make product discovery effortless, and integrated Trusted Shops for credibility and Google Analytics for actionable insights leaving the owner with powerful administrative and marketing tools.',
+        'In addition to my technical responsibilities, I also had the opportunity to conduct culture fit interviews for potential new hires. This involved assessing candidates not only for their technical skills but also for their alignment with our company values and culture. It was a rewarding experience to help identify individuals who would thrive in our work environment and contribute positively to our team dynamics and values.',
     },
     {
-      url: 'https://www.smokkers.de',
-      imageSrc: '/smokkers.jpg',
-      title: 'Smokkers - Webshop',
+      url: 'https://www.linkedin.com/in/quirin-langer',
+      imageSrc: '',
+      title: 'Microservices - zvoove - Software Engineer',
       description:
-        'For smokkers.de, I focused on both shop functionality as well as compliance by including robust age verification and content restrictions because of their tobacco product portfolio. To support international growth, I developed a custom translation tool that automatically converts product data into multiple languages—significantly expanding reach while reducing the time and cost of manual translations.',
+        "While I can't talk about the different projects in detail, I can say that I was working on services containing Angular Frontends, .NET Backends and Cloud Infrastructure using Terraform, Helm and Kubernetes. I built and scaled services from the first customer to now over 10k customers, and I'm proud to have contributed to the growth and success of the company. I've also had the opportunity to work with a talented team of developers and learn from their expertise, which has been invaluable for my professional development.",
     },
     {
-      url: 'https://www.autoglaswelt.de',
-      imageSrc: '/autoglaswelt.jpg',
-      title: 'Autoglaswelt - Webshop',
+      url: 'https://www.linkedin.com/posts/quirin-langer_softwareengineering-mentoring-karriere-activity-7287430212554809344-Jn39',
+      imageSrc: '',
+      title: 'Software Engineering Up Close - Freelance - Mentoring',
       description:
-        'I set up a modern, conversion-focused webshop specializing in automotive glass. The project included creating a clean, corporate-style theme for the shop as well as a sales funnel to guide users effectively from landing to checkout. I also implemented a custom shop plugin that allows customers to instantly filter through over 7000 different front windshields for a wide range of car models.',
+        "I recently had the privilege of giving a two-hour talk to the senior class students at Gregor-Mendel-Gymnasium. Working closely with my former IT teacher, Armin Eckert, I was able to give the students an insight into the exciting and varied profession of software engineering. We have looked at topics such as how a software engineer works, different working models, the personal qualities that make a good developer, and how to get started in this profession. I was particularly impressed by the audience's interest, curiosity and the applause in the end.",
+    },
+    {
+      url: 'https://github.com/Suneeh/Projektarbeit',
+      imageSrc: '',
+      title: 'BiLang - RIS Development - Final Thesis',
+      description:
+        'As the final thesis of my apprenticeship as a Software Developer who specializes in application development at RIS Web- & Software-Development GmbH & Co. KG in Regensburg I created a an API + OnPremise application to translate entire JTL Online Shop + ERP Databases into foreign languages. The project was implemented in php using the Laravel framework for the API and C# for the OnPremise application. It was a big success and many customers booked the service to reach foreign markets. Read the whole publication on GitHub.',
     },
     {
       url: 'https://www.star-piercing.com',
       imageSrc: '/star-piercing.png',
-      title: 'Star Piercing - Webshop',
+      title: 'Star Piercing - RIS Development - Apprenticeship',
       description:
         "For Star-Piercing.com, an online piercing and jewelry store, I contributed to the refinement of their e-commerce platform by focusing on their document design. I created cohesive and visually appealing templates for offers, invoices, and order confirmations, ensuring they aligned with the shop's branding and aesthetic as well as a polished customer experience.",
+    },
+    {
+      url: 'https://www.autoglaswelt.de',
+      imageSrc: '/autoglaswelt.jpg',
+      title: 'Autoglaswelt - RIS Development - Apprenticeship',
+      description:
+        'I set up a modern, conversion-focused webshop specializing in automotive glass. The project included creating a clean, corporate-style theme for the shop as well as a sales funnel to guide users effectively from landing to checkout. I also implemented a custom shop plugin that allows customers to instantly filter through over 7000 different front windshields for a wide range of car models.',
+    },
+    {
+      url: 'https://www.smokkers.de',
+      imageSrc: '/smokkers.jpg',
+      title: 'Smokkers - RIS Development - Apprenticeship',
+      description:
+        'For smokkers.de, I focused on both shop functionality as well as compliance by including robust age verification and content restrictions because of their tobacco product portfolio. To support international growth, I developed a custom translation tool that automatically converts product data into multiple languages—significantly expanding reach while reducing the time and cost of manual translations.',
+    },
+    {
+      url: 'https://www.beautykaufhaus.de',
+      imageSrc: '/beautykaufhaus.jpg',
+      title: 'Beautykaufhaus - RIS Development - Apprenticeship',
+      description:
+        'I enhanced the webshop beautykaufhaus.de, a beauty and cosmetics retailer, by combining user experience design with strategic functionality. I developed a dynamic category structure to make product discovery effortless, and integrated Trusted Shops for credibility and Google Analytics for actionable insights leaving the owner with powerful administrative and marketing tools.',
     },
   ];
 }
