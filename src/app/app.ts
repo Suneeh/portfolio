@@ -17,6 +17,18 @@ import { ScrollAnimationDirective } from './scroll-animation.directive';
 })
 export class App {
   protected readonly year = signal(new Date().getFullYear());
+  protected readonly age = signal(this.calculateAge(new Date(1996, 3, 7)));
+
+  private calculateAge(birthDate: Date): number {
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthdayThisYear =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() >= birthDate.getDate());
+
+    return hasHadBirthdayThisYear ? age : age - 1;
+  }
 
   scrollToProjects(): void {
     const element = document.getElementById('featured-projects');
