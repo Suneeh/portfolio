@@ -1,4 +1,4 @@
-<div class="px-5 md:px-45 py-5 min-h-screen md:h-screen">
+<div class="px-5 md:px-45 py-5 min-h-screen md:h-screen" id="about">
   <div
     class="flex justify-between p-5 bg-rose-200 rounded-xl items-center"
     appScrollAnimation
@@ -10,12 +10,24 @@
     <div class="hidden justify-between gap-5 md:flex">
       <div
         class="text-rose-800 uppercase font-bold cursor-pointer"
+        (click)="scrollToAbout()"
+      >
+        About
+      </div>
+      <div
+        class="text-rose-800 uppercase font-bold cursor-pointer"
         (click)="scrollToProjects()"
       >
         Projects
       </div>
-      <div class="text-rose-800 uppercase font-bold">About</div>
-      <div class="text-rose-800 uppercase font-bold">Resume</div>
+      <div class="text-rose-800 uppercase font-bold">
+        <a
+          href="https://docs.google.com/document/d/1zFqCbrMQwOWCNdDK3tVFKlCTmCPB9hokyS0RvMRZH6E/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Resume</a
+        >
+      </div>
     </div>
   </div>
   <div class="grid grid-cols-10 gap-5 mt-5 min-h-90/100 md:h-90/100">

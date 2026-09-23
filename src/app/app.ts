@@ -30,6 +30,13 @@ export class App {
     return hasHadBirthdayThisYear ? age : age - 1;
   }
 
+  scrollToAbout(): void {
+    const element = document.getElementById('about');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   scrollToProjects(): void {
     const element = document.getElementById('featured-projects');
     if (element) {
